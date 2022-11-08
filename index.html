@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리아 이벤트 페이지</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <style>
+        *{margin:0; padding:0;}
+        #wrap{
+            width:1000px; margin: 0 auto;
+            position: relative;
+        }
+        img{width:100%;}
+
+        .main{
+            position: absolute;
+            width: 710px;
+            height: 710px;
+            left: 145px;
+            top: 122px;
+            z-index: 1;
+        }
+
+        .title.on{
+            position: absolute;
+            width: 595px;
+            height: 462px;
+            left: 92px;
+            top: 763px;            
+            transition: .6s;
+            transition-delay: 1s;
+            opacity: 1;
+        }
+        .title{
+            position: absolute;
+            width: 595px;
+            height: 462px;
+            left: 300px;
+            top: 763px;
+            opacity: 0;
+        }
+        .al01{
+            position: absolute;
+            width: 814px;
+            height: 182px;
+            left: 94px;
+            top: 1297px;            
+        }
+        .al02{
+            position: absolute;
+            width: 814px;
+            height: 182px;
+            left: 92px;
+            top: 1517px;
+        }
+        .al03{
+            position: absolute;
+            width: 814px;
+            height: 182px;
+            left: 92px;
+            top: 1731px;
+        }
+        .al04{
+            position: absolute;
+            width: 814px;
+            height: 182px;
+            left: 92px;
+            top: 1945px;
+        }
+        .model1.on{
+            position: absolute;
+            width: 384px;
+            height: 570px;
+            left: 92px;
+            top: 2447px;
+            opacity: 1;
+            transition: .6s;
+        }
+        .model1{
+            position: absolute;
+            width: 384px;
+            height: 570px;
+            left: -100px;
+            top: 2447px;
+            opacity: 0;
+        }
+
+        .model2.on{
+            position: absolute;
+            width: 384px;
+            height: 570px;
+            left: 524px;
+            top: 2447px;
+            opacity: 1;
+            transition: .8s;
+        }
+        .model2{
+            position: absolute;
+            width: 384px;
+            height: 570px;
+            left: 724px;
+            top: 2447px;
+            opacity: 0;
+        }
+
+        .heart1{
+            position: absolute;
+            width: 141px;
+            height: 47px;
+            left: 57px;
+            top: 2590px;
+        }
+        .heart2{
+            position: absolute;
+            width: 141px;
+            height: 47px;
+            left: 453px;
+            top: 2543px;
+        }
+        .heart3{
+            position: absolute;
+            width: 141px;
+            height: 47px;
+            left: 402px;
+            top: 2733px;
+        }
+        .heart4{
+            position: absolute;
+            width: 141px;
+            height: 47px;
+            left: 804px;
+            top: 2590px;
+        }
+
+        .review{
+            position: absolute;
+            width: 404px;
+            height: 76px;
+            left: 298px;
+            top: 3090px;
+        }
+
+        .coupon{
+            position: absolute;
+            width: 800px;
+            height: 300px;
+            left: 100px;
+            top: 3463px;
+
+        }
+
+        .ani{
+            position: absolute;
+            animation: updown 5s infinite;
+        }
+        @keyframes updown{
+            0%{transform: translate(100px,-100px); opacity: 0;}
+            20%{transform: translate(0,0); opacity: 1;}
+            30%{transform: translate(0,0); opacity: 1;}
+            50%{transform: translate(-50px,-50px); opacity: 0;}
+            100%{transform: translate(-50px,-50px); opacity: 0;}
+        }
+
+        .al.on{
+            transform: translate(0);
+            transition: .6s;
+            opacity: 1;
+        }
+        .al{
+            transform: translate(100px);
+            opacity: 0;
+        }
+        .al.on.al01{
+            transition-delay: 1.2s;
+        }
+        .al.on.al02{
+            transition-delay: 1.4s;
+        }
+        .al.on.al03{
+            transition-delay: 1.6s;
+        }
+        .al.on.al04{
+            transition-delay: 1.8s;
+        }
+
+
+        .heart.on{
+            transform: translate(0);            
+            transition: .6s;
+            opacity: 1;
+        }
+        .heart{
+            transform: translate(20px,20px);
+            opacity: 0;            
+        }
+        .heart.on.heart1{
+            transition-delay:.6s ;
+        }
+        .heart.on.heart2{
+            transition-delay:.9s ;
+        }
+        .heart.on.heart3{
+            transition-delay:1.2s ;
+        }
+        .heart.on.heart4{
+            transition-delay:1.5s ;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <img src="img/main.png" alt="" class="main">
+        <img src="img/ani01.png" alt="" class="ani">
+        <img src="img/background.png" alt="">
+        <img src="img/title.png" alt="" class="title">
+        <img src="img/01.png" alt="" class="al al01">
+        <img src="img/02.png" alt="" class="al al02">
+        <img src="img/03.png" alt="" class="al al03">
+        <img src="img/04.png" alt="" class="al al04">
+
+        <img src="img/model1.png" alt="" class="model1">
+        <img src="img/model2.png" alt="" class="model2">
+
+        <img src="img/heart1.png" alt="" class="heart heart1">
+        <img src="img/heart2.png" alt="" class="heart heart2">
+        <img src="img/heart3.png" alt="" class="heart heart3">
+        <img src="img/heart4.png" alt="" class="heart heart4">
+
+        <img src="img/review.png" alt="" class="review">
+        <img src="img/coupon.png" alt="" class="coupon">
+    </div>
+    
+    <script>
+        window.addEventListener("load", ani);
+        window.addEventListener("scroll", scr);
+
+        function ani(){
+            $(".title").addClass("on");
+            $(".al").addClass("on");
+        }
+        function scr(){
+            if(scrollY>2000){
+                $(".model1").addClass("on");
+                $(".model2").addClass("on");
+                $(".heart").addClass("on");
+            }else{
+                $(".model1").removeClass("on");
+                $(".model2").removeClass("on");
+                $(".heart").removeClass("on");
+            }
+        }
+
+    </script>
+</body>
+</html>
